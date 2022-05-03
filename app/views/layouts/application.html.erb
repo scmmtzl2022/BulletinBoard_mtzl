@@ -112,14 +112,19 @@
     </head>
 
   <body>
-  <%= render partial: "shared/navbar" %>
-  <div class="container wrapper">
-  <% if notice %>
-    <%= render 'layouts/alerts' %>
-  <% end %>
-
-    <%= yield %>
+   
+      <%= render partial: "shared/navbar" %>
+   
+    <div class="container wrapper">
+      <% if notice %>
+        <%= render 'layouts/alerts' %>
+      <% end %>
+      <%= yield %>
     </div>
+
+    
+      <%= render 'layouts/footer' %>
+    
   </body>
 </html>
 <script>

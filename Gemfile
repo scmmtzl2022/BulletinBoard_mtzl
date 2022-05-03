@@ -19,6 +19,12 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
+gem "paranoia", "~> 2.2"
+gem "trailblazer"
+gem "trailblazer-rails" 
+gem "trailblazer-cells"
+gem "cells-rails"
+gem 'slim'
 
 gem 'font-awesome-rails'
 # Use Redis adapter to run Action Cable in production
@@ -27,7 +33,7 @@ gem 'font-awesome-rails'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

@@ -18,8 +18,19 @@ Rails.application.routes.draw do
     end
   end
   get "/search", to: "posts#search"
+  #login
+    get 'sessions/login'
+    get 'sessions/welcome'
+
+   get 'login', to: 'sessions#new'
+  # get 'logout', to: 'sessions#logout'
+   post 'login', to: 'sessions#create'
+   get 'welcome', to: 'sessions#welcome'
+  # get 'authorized', to: 'sessions#page_requires_login'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users
-  post "/handle_login", to: "users#validate_login"
   get "/handle_login", to: "users#handle_login"
+  post "/handle_login", to: "users#validate_login"
+  get "/logout", to: "users#logout"
 end

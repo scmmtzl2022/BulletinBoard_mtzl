@@ -7,4 +7,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email,presence: true, uniqueness: true , format: { with: /\A[^@\s]+@([^@.\s]+\.)+[^@.\s]+\z/ }
   validates :password,presence: true
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  # image
+  has_one_attached :profile
 end
